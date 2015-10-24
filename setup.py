@@ -121,8 +121,11 @@ setup(
     include_package_data=True,
     platforms='any',
     entry_points={
-        "invenio_i18n.translations": [
-            "messages = invenio_i18n"
+        'invenio_base.apps': [
+            'invenio_i18n = invenio_i18n:InvenioI18N'
+        ],
+        'invenio_i18n.translations': [
+            'messages = invenio_i18n'
         ],
     },
     extras_require=extras_require,
